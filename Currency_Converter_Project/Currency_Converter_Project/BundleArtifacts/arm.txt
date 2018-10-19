@@ -1,0 +1,5 @@
+MainPackage=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\bin\ARM\Debug\Currency_Converter_Project_1.0.0.0_ARM_Debug.appx
+SymbolPackage=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\AppPackages\Currency_Converter_Project_1.0.0.0_Debug_Test\Currency_Converter_Project_1.0.0.0_ARM_Debug.appxsym
+ResourcePack=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\bin\ARM\Debug\Currency_Converter_Project_1.0.0.0_scale-100.appx
+ResourcePack=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\bin\ARM\Debug\Currency_Converter_Project_1.0.0.0_scale-150.appx
+ResourcePack=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\bin\ARM\Debug\Currency_Converter_Project_1.0.0.0_scale-400.appx

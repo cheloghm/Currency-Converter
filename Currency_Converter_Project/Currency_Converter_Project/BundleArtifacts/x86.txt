@@ -1,0 +1,2 @@
+MainPackage=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\bin\x86\Debug\Currency_Converter_Project_1.0.0.0_x86_Debug.appx
+SymbolPackage=C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\AppPackages\Currency_Converter_Project_1.0.0.0_Debug_Test\Currency_Converter_Project_1.0.0.0_x86_Debug.appxsym

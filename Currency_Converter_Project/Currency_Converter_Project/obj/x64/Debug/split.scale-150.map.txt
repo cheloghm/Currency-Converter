@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-150"
+"ResourceDimensions"		"scale-150"
+
+[Files]
+"C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\obj\x64\Debug\split.scale-150.pri"			"resources.pri"
+"C:\Users\CHELOGHM\source\repos\Currency_Converter_Project\Currency_Converter_Project\obj\x64\Debug\PackageLayout\Assets\BadgeLogo.scale-150.png"			"Assets\BadgeLogo.scale-150.png"

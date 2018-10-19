@@ -1,0 +1,392 @@
+﻿<Page
+    x:Class="Currency_Converter_Project.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Currency_Converter_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Grid x:Name="Currency_Converter" 
+          AutomationProperties.Name="Currency Converter" >
+        <Grid.Background>
+            <ImageBrush Opacity="0.3" 
+                        Stretch="Fill" 
+                        ImageSource="Assets/curr1.jpg"/>
+        </Grid.Background>
+        
+        <!--This is the general stack panel-->
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <!--This is the text block used to label/title the app 
+                -->
+            <TextBlock Text="Aptech"
+                           FontSize="35"
+                           Margin="0,-100"
+                           FontFamily="Segoe Ui Light"
+                           HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Currency Converter"
+                           FontSize="25"
+                           Margin="0,-60"
+                           FontFamily="Segoe Ui Light"
+                           HorizontalAlignment="Center"/>
+
+            <!--This is the first inner stack panel
+            containing the input field for entering
+            value to be converted, refresh button for refreshing the app, 
+            first combo box to choose currency to convert and second combo
+            bo for choosing currency to be converted to.-->
+            <StackPanel VerticalAlignment="Top"
+                        HorizontalAlignment="Center">
+
+                <!--This is the button for refreshing the app-->
+                <Button FontFamily="Segoe MDL2 Assets" 
+                            Content="&#xE72C;" 
+                            Margin="-50,-130" 
+                            Width="50"
+                            Height="30"
+                            Background="Black" 
+                            FontSize="15" 
+                            Foreground="Aqua" 
+                            Click="Button_Click_1"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top" />
+                
+
+                <!--This is the text box for entering the value to
+                    be converted-->
+                    <TextBox x:Name="amount" 
+                         PlaceholderText="Enter Amount to Convert:"
+                         Width="400"
+                         Height="60" 
+                         FontSize="25"
+                         FontFamily="Segoe Ui Light"
+                         HorizontalAlignment="Center"/>
+                    
+
+                <!--This is the text block indicating which currency is 
+                being converted from-->
+                <TextBlock Text="From:"
+                           FontSize="40"
+                           Margin="-50,10"
+                           FontFamily="Segoe Ui Light"
+                           HorizontalAlignment="Left"/>
+
+                <!--This is the combo box for choosing which 
+                country/currency
+                the value entered is being converted from-->
+                <ComboBox x:Name="firstcombo" 
+                          PlaceholderText="Choose currency to convert:"
+                          Width="400"
+                          FontSize="25"
+                          Height="60"
+                          FontFamily="Segoe Ui Light">
+                    
+                    <!--The options for country/currencies from which the 
+                    values will be converted starts here.
+                    Each country/currency is in a different
+                    combo box item-->
+                    
+                    <!--This is the combo box item for Nigeria-->
+                    <ComboBoxItem x:Name="Nig" 
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal"
+                                    x:Name="Nig2">
+                            <Image Source="Assets/NG_flag.png" 
+                                   Height="30" />
+                            <TextBlock x:Name="Nig3" 
+                                       Text="Nigerian: Naira"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Ghana-->
+                    <ComboBoxItem x:Name="gh1" 
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/GH_flag.png" 
+                                   Height="30" />
+                            <TextBlock x:Name="gh" 
+                                       Text="Ghana: Cedi"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for South Africa-->
+                    <ComboBoxItem x:Name="sar"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/SA_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="South Africa: Rand"
+                                       Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for China-->
+                    <ComboBoxItem x:Name="chin"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/CHI_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="China: Renminbi"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Greece-->
+                    <ComboBoxItem x:Name="grece"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/GRECE_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Grecee: Drachmas"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Ethiopia-->
+                    <ComboBoxItem x:Name="ethio"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/ETHIO_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Ethiopia: Birr"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Canada-->
+                    <ComboBoxItem x:Name="ca"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/CA_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Canada: CA Dollar"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Cyprus-->
+                    <ComboBoxItem x:Name="cyp"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/CYP_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Cyprus: Cypriot Pounds"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Malasia-->
+                    <ComboBoxItem x:Name="mal"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/MAL_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Malasia: Ringgit"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Mexico-->
+                    <ComboBoxItem x:Name="mex"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/MEX_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Mexico: Peso"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Saudi Arabia-->
+                    <ComboBoxItem x:Name="saudi"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/SAUDI_flag.png"
+                                   Height="30" />
+                            <TextBlock Text="Saudi Arabia: Riyal"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Malawi-->
+                    <ComboBoxItem x:Name="malaw"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/MALAWI_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Malawi: Kwacha"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Togo-->
+                    <ComboBoxItem x:Name="tog"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/TOG_flag.png" 
+                                   Height="30" />
+                            <TextBlock Text="Togo: CFA Franc"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>                    
+                    </ComboBoxItem>
+                    <!--The options for country/currencies from which the 
+                    values will be converted ends here.-->
+                    
+
+                <!-- the combo box for choosing which country/currency
+                the value entered is being converted from ends here-->
+                </ComboBox>
+
+                <!--This is the text block indicating which currency is 
+                being converted to-->
+                <TextBlock Text="To:"
+                           FontSize="40"
+                           Margin="-50,10"
+                           FontFamily="Segoe Ui Light"
+                           HorizontalAlignment="Left"/>
+
+                
+                <!--This is the combo box for choosing which 
+                country/currency
+                the value entered is being converted to-->
+                <ComboBox x:Name="secondcombo" 
+                          PlaceholderText="Choose currency to 
+                          be converted to:"
+                          Width="400"
+                          FontSize="22"
+                          Height="60"
+                          FontFamily="Segoe Ui Light">
+
+                    <!--The options for country/currencies to which the 
+                    values will be converted starts here.
+                    Each country/currency is in a different
+                    combo box item-->
+
+                    <!--This is the combo box item for USA-->
+                    <ComboBoxItem x:Name="usd" 
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/AM_flag.png" 
+                                   Height="30" />
+                            <TextBlock x:Name="usd2" 
+                                       Text="USA: Dollars" 
+                                       Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Britain-->
+                    <ComboBoxItem x:Name="pnd"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/BT_flag.png"
+                                   Height="30" />
+                            <TextBlock Text="British: Pounds"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ComboBoxItem>
+
+                    <!--This is the combo box item for Euro-->
+                    <ComboBoxItem x:Name="Euro"
+                                  FontFamily="Verdana" 
+                                  FontSize="12" 
+                                  FontWeight="Bold">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/EU_flag.jpg"
+                                   Height="30" />
+                            <TextBlock Text="European Union: Euro"
+                                       Margin="10,0,0,0" />
+                        </StackPanel>                    
+                    </ComboBoxItem>
+                    <!--The options for country/currencies from which the 
+                    values will be converted ends here.-->
+
+
+                <!-- the combo box for choosing which country/currency
+                the value entered is being converted from ends here-->
+                </ComboBox>
+
+            <!--This the closing tag of the first inner stack panel-->
+            </StackPanel>
+
+
+            <!--This is the second inner stack panel
+            containing the convert button and the text
+            block where the convertion result will
+            be displayed.-->
+            <StackPanel VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center">
+
+                
+                <!--This is the button for converting the value entered
+                by user to the corresponding currency.-->
+                <Button Content="Convert"
+                        Click="Button_Click"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center"
+                        FontSize="30"
+                        Background="Black"
+                        FontFamily="Segoe Ui Light" 
+                        Margin="0,15,0,0"/>
+
+                
+                <!--This is a stack panel inside the second inner stack 
+                panel, containning the text block where the convertion
+                result will be displayed.-->
+                <StackPanel VerticalAlignment="Bottom"
+                            HorizontalAlignment="Center"
+                            Orientation="Horizontal"
+                            Margin="0,15,0,0">
+
+                    <!--This is the text block where the 
+                    convertion result will be displayed.-->
+                    <TextBlock x:Name="Result" 
+                               Text="" 
+                               FontSize="30"/>
+
+                <!--The stack panel inside the second inner stack 
+                panel, containning the text block where the convertion
+                result will be displayed. Ends here-->
+                </StackPanel>
+
+            <!--The second inner stack panel ends here-->
+            </StackPanel>
+            
+            <!--This the closing tag of the general stack panel-->
+        </StackPanel>
+    </Grid>
+</Page>
